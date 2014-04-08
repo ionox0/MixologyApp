@@ -4,9 +4,10 @@ MixologyApp
 [![Coverage Status](https://coveralls.io/repos/TeamVegaCodefellows/MixologyApp/badge.png?branch=master)](https://coveralls.io/r/TeamVegaCodefellows/MixologyApp?branch=master)
 [![Dependency Status](https://gemnasium.com/TeamVegaCodefellows/MixologyApp.svg)](https://gemnasium.com/TeamVegaCodefellows/MixologyApp)
 
-~~~~~~~~~~TeamVega~~~~~~~~~~~
+[See the Project](http://ianjohnson.co)
 
-http://ianjohnson.co
+
+~~~~~~~~~~TeamVega~~~~~~~~~~~
 
 
 
