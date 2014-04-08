@@ -17,7 +17,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-mongo-drop');
     grunt.loadNpmTasks('grunt-mocha-cov');
     grunt.loadNpmTasks('grunt-concurrent');
-
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -243,6 +243,13 @@ module.exports = function (grunt) {
                 'uri': 'mongodb://localhost/mixology-prod'
             }
         },
+        uglify: {
+          js: {
+            files: {
+              'build/browser.min.js': 'build/browser.js'
+            }
+          }
+        }
     });
 
 	grunt.registerTask('default',['express:dev', 'watch:express']);
@@ -250,7 +257,7 @@ module.exports = function (grunt) {
     grunt.registerTask('test', ['mongo_drop', 'mongoimport', 'mochacov:unit', 'mochacov:coverage']);
     grunt.registerTask('test:acceptance',['build:dev', 'express:dev', 'casper']);
     grunt.registerTask('travis', ['mochacov:unit', 'mochacov:coverage', 'mochacov:coveralls']);
-    grunt.registerTask('build:dev', ['clean:dev', 'sass:dev', 'copy:dev', 'browserify:dev']);
+    grunt.registerTask('build:dev', ['clean:dev', 'sass:dev', 'copy:dev', 'browserify:dev', 'uglify']);
     grunt.registerTask('server:notest', ['mongoimport', 'build:dev', 'express:dev', 'watch:notest']);
     grunt.registerTask('heroku', ['build:dev', 'express:dev','watch:all']);
 
