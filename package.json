@@ -50,8 +50,7 @@
     "grunt-contrib-uglify": "^0.4.0"
   },
   "scripts": {
-    "test": "grunt travis",
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "test": "grunt travis"
   },
   "config": {
     "blanket": {
