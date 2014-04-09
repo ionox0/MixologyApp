@@ -30,7 +30,7 @@ app.configure(function () {
 
 var mongolab = process.env.MONGOLAB_URI;
 
-app.configure('development', function () {
+app.configure('production', function () {
     app.use(express.errorHandler());
     mongoose.connect(mongolab || 'mongodb://localhost/mixology-development');
 });
@@ -50,7 +50,7 @@ app.post('/api/v1/createDrink', drinks.create);
 
 var server = http.createServer(app);
 
-var port = 80;
+var port = process.env.PORT || 80;
 
 server.listen(port, function () {
     console.log('App listening on port ' + port);
