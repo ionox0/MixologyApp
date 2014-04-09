@@ -30,7 +30,7 @@ app.configure(function () {
 
 var mongolab = process.env.MONGOLAB_URI;
 
-app.configure('development', function () {
+app.configure('production', function () {
     app.use(express.errorHandler());
     mongoose.connect(mongolab || 'mongodb://localhost/mixology-development');
 });
