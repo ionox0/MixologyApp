@@ -1,9 +1,9 @@
 'use strict';
 /*global casper*/
 
-casper.test.begin('users', 2, function suite(test) {
+casper.test.begin('questions', 2, function suite(test) {
 
-  casper.start('http://localhost:3000#questions/', function() {
+  casper.start('http://localhost/', function() {
     test.assertHttpStatus(200);
   });
 
@@ -12,28 +12,36 @@ casper.test.begin('users', 2, function suite(test) {
   });
 
   casper.then(function(){
-    test.assertVisible('p.questionOne', 'questionOne selector is visible');
+    test.assertVisible('div.page', 'party answer is visible');
   });
 
   casper.then(function(){
-    test.assertVisible('p.answersOne', 'answersOne selector is visible');
+    test.assertVisible('div.question', 'business answer is visible');
+  });
+
+  casper.then(function(){
+    test.assertVisible('button.classy', 'classy answer is visible');
   });
 
   casper.then(function() {
-    this.click('button');
+    this.click('.party');
     console.log('click');
   });
 
   casper.then(function(){
-    test.assertVisible('p.questionTwo', 'questionTwo selector is visible');
+    test.assertVisible('button.whiskey', 'whiskey answer is visible');
   });
 
   casper.then(function(){
-    test.assertVisible('p.answersTwo', 'answersTwo selector is visible');
+    test.assertVisible('button.vodka', 'vodka answer is visible');
+  });
+
+  casper.then(function(){
+    test.assertVisible('button.gin', 'gin answer is visible');
   });
 
   casper.then(function() {
-    this.click('button');
+    this.click('.whiskey');
     console.log('click');
   });
 

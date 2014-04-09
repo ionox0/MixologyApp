@@ -35,6 +35,10 @@ input {
     height: 1.8em;
     padding: 0.2em; }
 
+#loggedInName {
+  font-weight: 200;
+  color: #FFFAF6; }
+
 .left-off-canvas-menu {
   background-color: #F0EBDE; }
 
@@ -169,7 +173,27 @@ button:focus {
   border: 2px solid #520B00;
   color: #FFFAF6; }
 
+.recipeButton[disabled] {
+  background-color: #6C0F00;
+  border: 2px solid #6C0F00;
+  color: #FFFAF6; }
+
+.recipeButton[disabled]:hover {
+  background-color: #6C0F00;
+  border: 2px solid #6C0F00;
+  color: #FFFAF6; }
+
+.recipeButton[disabled]:focus {
+  background-color: #6C0F00;
+  border: 2px solid #6C0F00;
+  color: #FFFAF6; }
+
 .fb-share-button {
   margin-top: -10px; }
+
+.fb_iframe_widget {
+  vertical-align: top;
+  padding-top: 5px;
+  padding-left: 5px; }
 
 /*# sourceMappingURL=main.css.map */
