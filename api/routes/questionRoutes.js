@@ -72,26 +72,3 @@ exports.getSecondQuestion = function(req, res) {
 //   });
 // };
 
-// exports.update = function(req, res) {
-//   var id = req.params.id;
-//   delete req.body._id;
-//   User.update({'_id': String(id)}, user, function(err){
-//   var user = req.body;
-//     if(err) {
-//       res.send(500, {'error': err});
-//     } else {
-//       res.send({msg: 'success'});
-//     }
-//   });
-// };
-
-// exports.destroy = function(req, res) {
-//   var id = String(req.params.id);
-//   User.remove({'_id': id}, function(err){
-//     if(err){
-//       res.send(500, {'error': err});
-//     } else {
-//       res.send({'msg': 'success'});
-//     }
-//   });
-// };
