@@ -50,7 +50,7 @@ app.post('/api/v1/createDrink', drinks.create);
 
 var server = http.createServer(app);
 
-var port = 80 || process.env.PORT;
+var port = 3000 || process.env.PORT;
 
 server.listen(port, function () {
     console.log('App listening on port ' + port);
